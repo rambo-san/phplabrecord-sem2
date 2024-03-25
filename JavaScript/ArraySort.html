@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sort</title>
+</head>
+<body>
+    <h1>Array Sort</h1>
+    <p>Enter the array elements, separated by commas:</p>
+    <input type="text" id="array" placeholder="Enter array" />
+    <button onclick="sortArray()">Sort</button>
+    <p id="sortedArray"></p>
+    <script>
+        function sortArray() {
+            const array = document.getElementById("array").value.split(",");
+            array.sort();
+            document.getElementById("sortedArray").innerText = "Sorted array: " + array;
+        }
+    </script>
+</body>
+</html>

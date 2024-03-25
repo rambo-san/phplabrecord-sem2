@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>First Character</title>
+        <script>
+            function checkFirstCharacter() {
+                const string = document.getElementById("string").value;
+                const firstCharacter = string.charAt(0);
+                console.log(firstCharacter);
+                if (firstCharacter === firstCharacter.toUpperCase()) {
+                    document.getElementById("output").innerText =
+                        "First character is uppercase";
+                } else {
+                    document.getElementById("output").innerText =
+                        "First character is lowercase";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="string" />
+            <button onclick="checkFirstCharacter()">
+                Check First Character
+            </button>
+            <p id="output"></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BgChange</title>
+</head>
+<body>
+    <button onclick="changeBgColor()">Change Background Color</button>
+    <script>
+    function changeBgColor() {
+        var colors = ["red", "blue", "green", "yellow", "orange", "purple"];
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.backgroundColor = randomColor;
+    }
+    </script>
+</body>
+</html>

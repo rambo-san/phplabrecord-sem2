@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quad</title>
+</head>
+<body>
+    <div>
+        <h1>Quadratic Equation Solver</h1>
+        <label for="a">Enter coefficient a:</label>
+        <input type="number" id="a" name="a" required>
+        <br>
+        <label for="b">Enter coefficient b:</label>
+        <input type="number" id="b" name="b" required>
+        <br>
+        <label for="c">Enter coefficient c:</label>
+        <input type="number" id="c" name="c" required>
+        <br>
+        <button onclick="solveQuadraticEquation()">Solve</button>
+        <br>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function solveQuadraticEquation() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+
+            var discriminant = b * b - 4 * a * c;
+
+            if (discriminant > 0) {
+                var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                document.getElementById("result").innerHTML = "The equation has two distinct real roots: x1 = " + x1 + ", x2 = " + x2;
+            } else if (discriminant === 0) {
+                var x = -b / (2 * a);
+                document.getElementById("result").innerHTML = "The equation has one real root: x = " + x;
+            } else {
+                document.getElementById("result").innerHTML = "The equation has no real roots.";
+            }
+        }
+    </script>
+</body>
+</html>

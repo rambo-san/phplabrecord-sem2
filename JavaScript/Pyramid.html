@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pyramid</title>
+    </head>
+    <body>
+        <div>
+            <h1>Pyramid</h1>
+            <p>Enter the number of rows for the pyramid</p>
+            <input type="number" id="rows" />
+            <button onclick="drawPyramid()">Draw Pyramid</button>
+            <div id="output"></div>
+        </div>
+        <script>
+            function drawPyramid() {
+                const rows = document.getElementById("rows").value;
+                let output = "";
+                for (let i = 1; i <= rows; i++) {
+                    for (let j = 1; j <= rows - i; j++) {
+                        output += "&nbsp;&nbsp;";
+                    }
+                    for (let k = 1; k <= 2 * i - 1; k++) {
+                        output += "*";
+                    }
+                    output += "<br>";
+                }
+                document.getElementById("output").innerHTML = output;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Decimal to Binary</title>
+    </head>
+    <body>
+        <div >
+            <h1>Decimal to Binary</h1>
+            <div>
+                <div>
+                    <label for="decimal">Enter a decimal number:</label>
+                    <input type="number" id="decimal" />
+                </div>
+                <button onclick="convertToBinary()">Convert to Binary</button>
+                <p id="output"></p>
+            </div>
+        </div>
+        <script>
+            function convertToBinary() {
+                const decimal = document.getElementById("decimal").value;
+                const binary = (decimal >>> 0).toString(2);
+                document.getElementById("output").innerText = binary;
+            }
+        </script>
+    </body>
+</html>
