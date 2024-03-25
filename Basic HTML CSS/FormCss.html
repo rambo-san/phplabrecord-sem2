@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+        <style>
+            :root {
+                --primary-color: rgb(185, 0, 0);
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Poppins, sans-serif;
+            }
+            body {
+                display: grid;
+                place-items: center;
+                height: 100vh;
+
+                background-color: #000000;
+                
+                background: linear-gradient(135deg, #ff000055 25%, transparent 25%) -27px 0/ 54px 54px, linear-gradient(225deg, #ff0000 25%, transparent 25%) -27px 0/ 54px 54px, linear-gradient(315deg, #ff000055 25%, transparent 25%) 0px 0/ 54px 54px, linear-gradient(45deg, #ff0000 25%, #000000 25%) 0px 0/ 54px 54px;
+
+            }
+            form {
+                width: 33%;
+                display: grid;
+                gap: 2rem;
+                padding: 2rem;
+                background-color: rgb(255, 251, 0);
+                border-radius: 0.5rem;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            form input,
+            button {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: 0.25rem;
+                color: #ffffff
+            }
+            button {
+                background-color: var(--primary-color);
+                border: none;
+            }
+            h1{
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="post">
+            <h1>Signup</h1>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" />
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" />
+            </div>
+            <div>
+                <label for="confirm-password">Confirm Password:</label>
+                <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

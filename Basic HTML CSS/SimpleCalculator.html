@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <style>
+            .buttons {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h4>Simple Calculator</h4>
+            <input id="box" type="text" />
+            <br>
+            <br>
+            <div class="buttons">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>*</button>
+                <button>C</button>
+                <button>0</button>
+                <button>=</button>
+                <button>/</button>
+            </div>
+        </main>
+        <script>
+            const box = document.getElementById("box");
+            const buttons = document.querySelectorAll("button");
+            buttons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    if (button.textContent === "C") {
+                        box.value = "";
+                    } else if (button.textContent === "=") {
+                        box.value = eval(box.value);
+                    } else {
+                        box.value += button.textContent;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

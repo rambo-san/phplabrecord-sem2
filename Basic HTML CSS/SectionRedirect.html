@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Redirect</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                display: grid;
+                place-items: center;
+                height: 100vh;
+                gap: 2rem;
+            }
+            .sec{
+                background-color: rgb(255, 255, 255);
+                padding: 2rem;
+                border-radius: 1rem;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+                height: 100vh;
+                width: 100%;
+            }
+            a {
+                display: block;
+                margin-top: 1rem;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 251, 0);
+                padding: 0.5rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sec" id="section1">
+        <h1>Welcome to Section 1</h1>
+        <p>This is the content of section 1.</p>
+        <a href="#section2">Go to Section 2</a>
+        </div>
+
+        <div class="sec" id="section2">
+        <h1>Welcome to Section 2</h1>
+        <p>This is the content of section 2.</p>
+        <a href="#section1">Go to Section 1</a>
+        </div>
+
+        
+    </body>
+</html>
